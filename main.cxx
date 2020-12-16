@@ -16,5 +16,6 @@ int WINAPI WinMain(HINSTANCE i, HINSTANCE pi, LPSTR l, int s) {
     TranslateMessage(&msg);
     DispatchMessage(&msg);
   }
+  UnhookWindowsHookEx(mh);
   return static_cast<int>(msg.wParam);
 }
